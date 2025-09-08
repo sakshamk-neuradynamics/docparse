@@ -1,0 +1,13 @@
+[project]
+name = "docparse"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "docling>=2.50.0",
+    "llmwhisperer-client>=2.4.2",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.49.1",
+    "tesserocr>=2.8.0",
+]
