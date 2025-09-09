@@ -38,12 +38,7 @@ class Parser:
             doc = process_document_with_docling(source_path)
             if doc:
                 self.docling_document = doc
-                # Create a temporary Path for markdown output to get the string content
-                temp_md_path = Path("temp_output.md")
-                doc.save_as_markdown(temp_md_path)
-                markdown_content = temp_md_path.read_text(encoding="utf-8")
-                temp_md_path.unlink()  # Clean up the temporary file
-                return markdown_content
+                return doc.export_to_markdown()
             return None
         if self.parser_type == "llmwhisperer":
             return process_document_with_llmwhisperer(source_path)
