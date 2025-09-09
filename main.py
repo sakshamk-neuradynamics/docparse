@@ -9,7 +9,6 @@ import os
 from dotenv import load_dotenv
 import streamlit as st
 
-# Note: Linter may show these as unused, but they are used in the Streamlit app
 from parsers import Parser
 
 load_dotenv()
